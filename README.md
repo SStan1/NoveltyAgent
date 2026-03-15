@@ -33,7 +33,7 @@ Compared with general-purpose review or deep research systems, NoveltyAgent is d
 
 Below is a short demo showing how to use NoveltyAgent:
 
-<video src="./Insight Agent demo.mp4" controls width="100%"></video>
+<video src="NoveltyAgent_demo.mp4" controls width="100%"></video>
 
 > **Note:** This demo is for demonstration purposes only. In real-world usage, the analysis process takes significantly longer than shown in the video, as it involves extensive literature retrieval, comparison, and validation steps.
 
