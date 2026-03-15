@@ -1,12 +1,12 @@
 {
-  "paper_name": "AgentClinic: a multimodal agent benchmark to evaluate AI in simulated clinical environments",
+  "paper_name": "",
   "use_full_text_in_comparison": false,
   "max_total_papers": 199,
   "api": {
-    "base_url": "http://localhost:9380",
-    "api_key": "ragflow-U4M2MwNjBlNTFhNTExZjBiM2QxMDI0Mm",
-    "openai_api_key": "sk-WuLHOn76BDeEpv0OSI9TYojachP9Tk2ecySQZCGu1DeSeOG6",
-    "openai_base_url": "https://yunwu.ai/v1",
+    "base_url": "",
+    "api_key": "",
+    "openai_api_key": "",
+    "openai_base_url": "",
     "openai_timeout": 240.0
   },
   "paths": {
@@ -14,7 +14,7 @@
     "result_dir": "./result"
   },
   "llm_config": {
-    "model": "gemini-3.1-pro-preview",
+    "model": "",
     "temperature": 0.7,
     "max_retries": 10,
     "retry_delay": 3,

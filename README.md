@@ -1,55 +1,45 @@
+
 # NoveltyAgent
 
-NoveltyAgent is the open-source codebase for our paper on **automatic paper novelty analysis**.  
-It is designed to help users quickly understand **how novel a research paper is** by retrieving related literature, comparing the paper’s main contributions with prior work, and automatically generating a structured novelty analysis report.
+NoveltyAgent is the official codebase for our paper:
 
-After you provide an input paper and configure the required environment (such as API keys and retrieval services), NoveltyAgent can automatically produce an **innovation / novelty analysis report** for that paper.
+> **NoveltyAgent: Autonomous Novelty Reporting Agent with Point-wise Novelty Analysis and Self-Validation**
+
+It is designed to help users quickly understand **how novel a research paper is** by retrieving related literature, comparing the paper's main contributions with prior work, and automatically generating a structured novelty analysis report.
+
+After you provide an input paper and configure the required environment (such as API keys and retrieval services), NoveltyAgent can automatically produce a **novelty analysis report** for that paper.
 
 ## Overview
 
 ![NoveltyAgent Workflow](./Setup/main_figure_new_withexample.png)
 
-## What does it do?
+Given a research paper, NoveltyAgent will automatically analyze the main contributions of the paper, retrieve relevant related work, compare the paper against prior literature, and generate a structured **novelty report**.
 
-Given a research paper, NoveltyAgent will automatically:
-
-- analyze the main contributions of the paper,
-- retrieve relevant related work,
-- compare the paper against prior literature,
-- and generate a structured **novelty report**.
-
-The output helps users quickly understand:
-
-- what the paper mainly proposes,
-- which parts are similar to existing work,
-- which parts are potentially novel,
-- and an overall novelty judgment.
+The output helps users quickly understand what the paper mainly proposes, which parts are similar to existing work, which parts are potentially novel, and an overall novelty judgment.
 
 ## Core Advantages
 
-Compared with general-purpose review or deep research systems, NoveltyAgent is designed specifically for **paper novelty analysis**. Its main advantages are:
+Compared with general-purpose review or deep research systems, NoveltyAgent is designed specifically for **paper novelty analysis**. Its main advantages include the following:
 
-- **Paper-specific novelty analysis**  
-  Built for originality evaluation instead of general review generation.
+**Paper-specific novelty analysis** — Built for originality evaluation instead of general review generation.
 
-- **Fine-grained comparison**  
-  It analyzes a paper by contribution points rather than treating the whole manuscript as one query.
+**Fine-grained comparison** — It analyzes a paper by contribution points rather than treating the whole manuscript as one query.
 
-- **Literature-grounded report generation**  
-  It retrieves and compares against related papers to support its analysis with evidence.
+**Literature-grounded report generation** — It retrieves and compares against related papers to support its analysis with evidence.
 
-- **Better faithfulness**  
-  It includes a validation step to reduce unsupported claims and improve report reliability.
+**Better faithfulness** — It includes a validation step to reduce unsupported claims and improve report reliability.
+
+## Demo
+
+Below is a short demo showing how to use NoveltyAgent:
+
+<video src="./Insight Agent demo.mp4" controls width="100%"></video>
+
+> **Note:** This demo is for demonstration purposes only. In real-world usage, the analysis process takes significantly longer than shown in the video, as it involves extensive literature retrieval, comparison, and validation steps.
 
 ## Basic Usage
 
-The typical workflow is simple:
-
-1. Prepare an input paper.
-2. Configure API keys and required services.
-3. Launch the application.
-4. Submit the paper.
-5. Receive an automatically generated **novelty analysis report**.
+The typical workflow is straightforward: prepare an input paper, configure API keys and required services, launch the application, submit the paper, and receive an automatically generated **novelty analysis report**.
 
 ## Installation & Setup
 
@@ -63,8 +53,8 @@ The typical workflow is simple:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/<your-org>/NoveltyAgent_opensource2026311.git
-cd NoveltyAgent_opensource2026311
+git clone https://github.com/<your-org>/NoveltyAgent.git
+cd NoveltyAgent
 ```
 
 ### Step 2: Install Python Dependencies
@@ -87,7 +77,6 @@ snapshot_download(
 "
 ```
 
-> **Note:** This only downloads the model weights. The Docker service will be started in a later step.
 
 ### Step 4: Deploy RAGFlow
 
@@ -107,7 +96,7 @@ sudo sysctl -w vm.max_map_count=262144
 
 To make this change permanent, add or update the following line in `/etc/sysctl.conf`:
 
-```bash
+```
 vm.max_map_count=262144
 ```
 
@@ -156,7 +145,7 @@ After both Docker services are up and running, you need to **manually** register
 2. Log in to the RAGFlow admin panel.
 3. Go to **Model Providers** settings.
 4. Add a new **Rerank model** with the following settings:
-   - **Model type:** Rerank
+   - **Model type:** Reranker
    - **Model name:** `Qwen3-Reranker-4B`
    - **Provider / Inference backend:** VLLM
    - Point the model URL to the Reranker service endpoint launched in Step 5.2.
@@ -176,6 +165,8 @@ streamlit run NoveltyAgent/app.py
 
 The application will be available by default at:
 
-```bash
+```
 http://localhost:8501
 ```
+```
+

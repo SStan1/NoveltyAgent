@@ -5,12 +5,12 @@
     "report_path": ""
   },
   "api_credentials": {
-    "openai_api_key": "sk-WuLHOn76BDeEpv0OSI9TYojachP9Tk2ecySQZCGu1DeSeOG6",
-    "ragflow_api_key": "ragflow-U4M2MwNjBlNTFhNTExZjBiM2QxMDI0Mm"
+    "openai_api_key": "",
+    "ragflow_api_key": ""
   },
   "api_endpoints": {
-    "openai_base_url": "https://yunwu.ai/v1",
-    "ragflow_base_url": "http://10.249.45.89:9380"
+    "openai_base_url": "",
+    "ragflow_base_url": ""
   },
   "models": {
     "query_generation_model": "gemini-2.5-flash-nothinking",
