@@ -28,9 +28,9 @@ Compared with general-purpose review or deep research systems, NoveltyAgent is d
 ## Demo
 
 We provide a short demo video to illustrate the usage of NoveltyAgent:
-
+```bash
 ./NoveltyAgent_demo.mp4
-
+```
 > **Note:** This demo is for demonstration purposes only. In real-world usage, the analysis process takes significantly longer than shown in the video, as it involves extensive literature retrieval, comparison, and validation steps.
 
 ## Installation & Setup
