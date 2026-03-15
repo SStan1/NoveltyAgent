@@ -7,8 +7,6 @@ NoveltyAgent is the official codebase for our paper:
 
 It is designed to help users quickly understand **how novel a research paper is** by retrieving related literature, comparing the paper's main contributions with prior work, and automatically generating a structured novelty analysis report.
 
-After you provide an input paper and configure the required environment (such as API keys and retrieval services), NoveltyAgent can automatically produce a **novelty analysis report** for that paper.
-
 ## Overview
 
 ![NoveltyAgent Workflow](./Setup/main_figure_new_withexample.png)
@@ -21,25 +19,19 @@ The output helps users quickly understand what the paper mainly proposes, which 
 
 Compared with general-purpose review or deep research systems, NoveltyAgent is designed specifically for **paper novelty analysis**. Its main advantages include the following:
 
-**Paper-specific novelty analysis** — Built for originality evaluation instead of general review generation.
+- **Point-by-point novelty analysis** — It decomposes a paper into individual novelty points and retrieves evidence for each one separately, enabling a more comprehensive analysis, instead of treating the entire paper as a single query.
 
-**Fine-grained comparison** — It analyzes a paper by contribution points rather than treating the whole manuscript as one query.
+- **Full-text literature grounding** — It builds its reference database from the full text of related papers rather than relying only on abstracts, providing richer details for comparison and helping avoid shallow or overly generic analysis.
 
-**Literature-grounded report generation** — It retrieves and compares against related papers to support its analysis with evidence.
-
-**Better faithfulness** — It includes a validation step to reduce unsupported claims and improve report reliability.
+- **Better faithfulness** — It includes a self-validation step to reduce unsupported claims and improve the reliability of the generated report.
 
 ## Demo
 
-Below is a short demo showing how to use NoveltyAgent:
+We provide a short demo video to illustrate the usage of NoveltyAgent:
 
-<video src="./NoveltyAgent_demo.mp4" controls width="100%"></video>
+./NoveltyAgent_demo.mp4
 
 > **Note:** This demo is for demonstration purposes only. In real-world usage, the analysis process takes significantly longer than shown in the video, as it involves extensive literature retrieval, comparison, and validation steps.
-
-## Basic Usage
-
-The typical workflow is straightforward: prepare an input paper, configure API keys and required services, launch the application, submit the paper, and receive an automatically generated **novelty analysis report**.
 
 ## Installation & Setup
 
@@ -53,7 +45,7 @@ The typical workflow is straightforward: prepare an input paper, configure API k
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/<your-org>/NoveltyAgent.git
+git clone https://github.com/SStan1/NoveltyAgent.git
 cd NoveltyAgent
 ```
 
