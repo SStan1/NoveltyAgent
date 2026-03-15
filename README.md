@@ -168,5 +168,4 @@ The application will be available by default at:
 ```
 http://localhost:8501
 ```
-```
 
