@@ -1,0 +1,28 @@
+{
+  "paths": {
+    "questions_json": "../Data/Checklist_questions.json",
+    "output_base_dir": "../Evaluation_result",
+    "report_path": ""
+  },
+  "api_credentials": {
+    "openai_api_key": "sk-WuLHOn76BDeEpv0OSI9TYojachP9Tk2ecySQZCGu1DeSeOG6",
+    "ragflow_api_key": "ragflow-U4M2MwNjBlNTFhNTExZjBiM2QxMDI0Mm"
+  },
+  "api_endpoints": {
+    "openai_base_url": "https://yunwu.ai/v1",
+    "ragflow_base_url": "http://10.249.45.89:9380"
+  },
+  "models": {
+    "query_generation_model": "gemini-2.5-flash-nothinking",
+    "evaluation_model": "gemini-2.5-flash-nothinking"
+  },
+  "rag": {
+    "page": 1,
+    "similarity_threshold": 0.2,
+    "vector_similarity_weight": 0.5,
+    "top_k": 2048,
+    "rerank_id": "Qwen3-Reranker-4B___VLLM",
+    "keyword": false,
+    "chunks_per_query": 7
+  }
+}

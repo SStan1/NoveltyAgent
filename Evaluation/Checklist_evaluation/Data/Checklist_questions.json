@@ -1,0 +1,150 @@
+{
+  "evaluation_framework": {
+    "benchmark_info": "The task requires generating a concise, precise 3-section report as an expert in academic paper analysis, innovation extraction, and critical evaluation, based solely on information retrieved from searching the provided paper name (e.g., via Web_Access_search tool). The report analyzes the paper's content, innovations, comparisons, and critically evaluates both genuine contributions and aspects lacking originality without speculation or invention. The structure is exactly: 1. Paper Content Summary (provides a factual single-paragraph overview of the paper's main task, problems solved, key methods, and explanations of uncommon abbreviations, derived only from retrieved text); 2. Point-wise Novelty Analysis (identifies and analyzes each claimed novelty point from the paper in numbered subsections, with: a) Claimed Novelty classifying it into one of six types and detailing core idea; b) Similarities summarizing comparisons to other works based on retrieved text; c) Unique Differences highlighting specific contrasts; d) Details of Unique Differences answering classification-specific questions about technical implementation and claimed benefits); 3. Novelty Summary (provides a comprehensive paragraph that identifies genuine significant contributions with synthesis of what/how/impact, identifies aspects lacking originality with categorization and improvement suggestions, and ends with a one-line summary including an innovation score 1-4 and rating word).",
+    "dimensions": {
+      "fluency": {
+        "concept": "Fluency",
+        "description": "It is mainly used to evaluate the writing ability of the current report, including whether the writing content is fluent, clear, and free of grammatical and structural errors. The purpose is to assess whether the content of the report is easy to read and maintains academic rigor.",
+        "conditions": "",
+        "constraints": "Each sub-question must be answerable with a simple 'yes' or 'no'.\n- A 'yes' answer should indicate that the sentence improves the specified evaluation criterion (e.g., Coherence, Relevance).\n- Each question should assess only a single dimension or concept.\n- Each question should not ask about more than one topic or concept.",
+        "filtered_questions": {
+          "formatting_and_grammar": [
+            "Is the report free from formatting issues and correctly capitalized throughout?",
+            "Are all sentences grammatically correct and free from errors?",
+            "Are verb tenses used consistently within each section?",
+            "Do pronouns agree in number and gender with their antecedents?"
+          ],
+          "conciseness": [
+            "Does the report avoid unnecessary repetition of the same information across different sections?",
+            "Are all statements directly relevant to the topic, without redundant elaborations?",
+            "Does the report refrain from restating identical technical details or findings multiple times?",
+            "Is the language precise and economical, avoiding verbose expressions where simpler alternatives exist?"
+          ],
+          "readability": [
+            "Is the report easy to read, without unnecessary complexity?",
+            "Are sentences generally concise, avoiding unnecessary wordiness?",
+            "Is terminology used consistently to avoid reader confusion?"
+          ]
+        }
+      },
+      "effectiveness": {
+        "concept": "Effectiveness",
+        "description": "This is mainly used to assess whether the current report has been written strictly in accordance with the template and whether the content of the writing meets the requirements of the task. At the same time, the logicality and conciseness of the writing content will also be assessed, with the aim of measuring whether the task I provided can be completed in a concise and high-quality manner.",
+        "conditions": "The database will provide you with the template that your current report should follow. Please read it carefully before answering the questions below.",
+        "constraints": "- Each sub-question must be answerable with a simple 'yes' or 'no'.\n- A 'yes' answer should indicate that the sentence improves the specified evaluation criterion (e.g., Coherence, Relevance).\n- Each question should assess only a single dimension or concept.\n- Each question should not ask about more than one topic or concept.",
+        "filtered_questions": {
+          "report_structure": [
+            "Is the current report strictly divided into sections as required: 1. Paper Content Summary, 2. Point-wise Novelty Analysis, 3. Novelty Summary",
+            "Are there no extra sections or headers beyond the three required sections?",
+            "Does the 'Novelty Summary' (Section 3) draw its conclusions logically from the evidence and analysis presented in the preceding sections?",
+            "In the 'Point-wise Novelty Analysis' (Section 2), does the analysis in subsection 2.d ('Details of Unique Differences') logically follow from and focus exclusively on the unique aspects identified in its corresponding subsection 2.c?",
+            "Does the analysis within subsection 2.d ('Details of Unique Differences') directly address the required questions for the specific innovation 'Classification' defined in subsection 2.a?",
+            "Within Section 2, does the report correctly use the required subsection headers: 'a. Claimed Novelty', 'b. Similarities', 'c. Unique Differences', and 'd. Details of Unique Differences' (if applicable)?"
+          ],
+          "report_content": [
+            "Does each sub-section under each section contain the required content in the temples?",
+            "Does Section 3 end with a single-line summary of the innovation impact?",
+            "In Section 3, was the article's originality rated on a scale of 1 to 4 as required by the template?"
+          ],
+          "relevance_to_topic": [
+            "Does each piece of content strictly adhere to the proposed theme without any signs of deviation?",
+            "Is there no inclusion of broader domain history or tangential background that is not directly relevant to the paper?",
+            "Does the entire report remain focused on analyzing the specified paper without introducing irrelevant topics or tangential discussions?",
+            "Does every section of the report address its designated purpose (content summary, point-wise novelty analysis, or novelty evaluation) without mixing or conflating objectives?"
+          ]
+        }
+      },
+      "completeness": {
+        "concept": "Completeness",
+        "description": "Mainly used to measure whether the current report makes full use of the content of related papers, especially in terms of novelty points. Check for any missing novelty points and the problems they may cause.",
+        "conditions": "These questions should be answered by consulting the database, which contains the relevant information. For example: When a question mentions the Main paper, you should assume that the database contains information about that main paper. When a question mentions related papers, you should assume that the database contains information about those related papers.However, the database contains a significant amount of information. You should independently determine which parts are relevant to the issue and focus your attention on those sections.You should also conduct targeted comparisons based on the relevant portions of the text. For example, if the question asks about the consistency between the current text and the related paper database, you should focus specifically on the parts that discuss related papers and base your comparison on those portions, rather than considering the parts about the main paper. ",
+        "constraints": "- Each sub-question must be answerable with a simple 'yes' or 'no'.\n- A 'yes' answer should indicate that the sentence improves the specified evaluation criterion (e.g., Coherence, Relevance).\n- Each question should assess only a single dimension or concept.\n- Each question should not ask about more than one topic or concept.",
+        "filtered_questions": {
+          "Completeness of the Paper Content Summary_Main": [
+            "Does the Paper Content Summary include the main objectives, methodology, and abbreviations that are mentioned in the provided text from the Main paper?",
+            "Does the summary explicitly state the paper's main objective in a clear, single sentence, if this objective is mentioned in the provided text?",
+            "Does the summary restate the specific problems the Main paper claims to solve, as described in the provided text?",
+            "Does the summary enumerate the key methodological components that are described in the provided text from the Main paper?",
+            "Does the summary define the uncommon abbreviations that appear in the provided text from the Main paper?"
+          ],
+          "Completeness of the Point-wise Novelty Analysis Section_1_Main": [
+            "Does the Paper Content Summary include all key elements from the main paper's retrieved text (e.g., main task/objective, problems addressed, and key methods/approaches) in a single paragraph, without omitting uncommon abbreviations that need explanation or adding unsubstantiated details?",
+            " In the Point-wise Novelty Analysis, does the report identify every claimed novelty point explicitly mentioned in the retrieved text of the main paper？",
+            "Does the 'Point-wise Novelty Analysis' section ensuring no major novelty points from the retrieved text of the main paper are overlooked or combined inappropriately?"
+          ],
+          "Completeness of the Point-wise Novelty Analysis Section_2_ALL": [
+            "In the similarity analysis section, does the report correctly identify similarities to the novelty point that are mentioned within the provided text from related papers?",
+            "If the provided text from related papers describes prior methods with the same core algorithmic idea, does the report identify them as similar?",
+            "If the provided text from related papers describes prior works sharing the same problem formulation or task, does the report identify them as similar?",
+            "If the provided text from related papers describes prior works sharing the core idea with only minor implementation differences, does the report identify them as similar?",
+            "If the provided text from related papers describes alternative approaches to the same limitation or gap, does the report identify them as similar?"
+          ],
+          "Completeness of the Point-wise Novelty Analysis Section_3_ALL": [
+            "In the 'Unique Differences' section, are the claims of uniqueness free from contradictions when checked against the provided text from related papers?",
+            "Does the report avoid claiming a feature as a 'Unique Difference' if the provided text from related papers describes a similar feature, even if different terminology is used?",
+            "For each unique point claimed in the report, is it true that no similar items are found within the provided text from related papers?",
+            "After comparing with the provided text from related papers, do the uniqueness claims made in the report appear to hold true?",
+            "Is the report's assertion of uniqueness for a specific feature supported by the absence of that feature in the provided texts from related papers?"
+          ]
+        }
+      },
+      "faithfulness": {
+        "concept": "Faithfulness",
+        "description": "Mainly used to check whether the current report is faithful to the content in the database, whether there are any discrepancies with the database content or fabricated information, and whether the content of the report misrepresents the content of the database.",
+        "conditions": "These questions should be answered by consulting the database, which contains the relevant information. For example: When a question mentions the main paper, you should assume that the database contains information about that main paper. When a question mentions related papers, you should assume that the database contains information about those related papers. However, the database contains a significant amount of information. You should independently determine which parts are relevant to the issue and focus your attention on those sections.You should also conduct targeted comparisons based on the relevant portions of the text. For example, if the question asks about the consistency between the current text and the related paper database, you should focus specifically on the parts that discuss related papers and base your comparison on those portions, rather than considering the parts about the main paper.",
+        "constraints": "- Each sub-question must be answerable with a simple 'yes' or 'no'.\n- A 'yes' answer should indicate that the sentence improves the specified evaluation criterion (e.g., Coherence, Relevance).\n- Each question should assess only a single dimension or concept.\n- Each question should not ask about more than one topic or concept.",
+        "filtered_questions": {
+          "relevance_Main": [
+            "Does the 'Paper Content Summary' accurately reflect the paper's main task, objective, and methods, with all factual details being directly verifiable from the provided text of the Main paper?",
+            "Does the 'Paper Content Summary' contain no information that is not explicitly supported by the provided text from the main paper?",
+            "For each 'Claimed Novelty' subsection, do the stated classification, core idea, and key technical elements accurately represent the contributions as described in the provided text from the Main paper?",
+            "Are all factual details within the 'Claimed Novelty' subsections directly verifiable from the provided text of the main paper?"
+          ],
+          "relevance_ALL": [
+            "Are all 'Similarities' (b) and 'Unique Differences' (c) described in the 'Point-wise Novelty Analysis' section exclusively based on and directly supported by the content found within the provided text from related papers?",
+            "Are all specific examples of similar objectives or mechanisms mentioned in the 'Similarities' subsections (b) precisely aligned with the information present in the provided text from related papers?",
+            "Are all specific contrasts elaborated in the 'Unique Differences' subsections (c) directly and accurately supported by the provided text from related papers?",
+            "Are the explanations and details provided for each 'Similarity' (b) and 'Unique Difference' (c) fully and accurately supported by the provided text from related papers?"
+          ],
+          "consistency_Main": [
+              "Does the report correctly distinguish between the Main paper's own contributions and the existing baselines or prior work described in the text, avoiding misattribution of features?",
+              "Does the report accurately interpret the logical flow and causal relationships of the proposed method of the Main paper, ensuring that the mechanism is explained exactly as the authors intended without logic errors?",
+              "Are the conclusions and claims in the report faithful to the nuances of the Main paper, avoiding exaggeration of results or misinterpretation of the limitations stated in the text?"
+          ],
+          "consistency_ALL": [
+            "Are all 'Similarities' and 'Unique Differences' presented in the 'Point-wise Novelty Analysis' section strictly derived from and explicitly supported by the content found within the provided text of related papers?",
+            "Is the 'Details of Unique Differences' for each novelty point solely based on the unique aspects and details explicitly present in the provided text, without additional interpretation?",
+            "Are any performance advantages or comparative benefits claimed within the report directly and explicitly supported by comparative evidence present in the provided text of related papers?"
+          ]
+        }
+      },
+      "depth": {
+        "concept": "Depth",
+        "description": "Primarily used to measure whether LLM can produce in-depth, accurate report content.It is also used to evaluate the model's ability to think independently during the report generation process.",
+        "conditions": "",
+        "constraints": "- Each sub-question must be answerable with a simple 'yes' or 'no'.\n- A 'yes' answer should indicate that the sentence improves the specified evaluation criterion (e.g., Coherence, Relevance).\n- Each question should assess only a single dimension or concept.\n- Each question should not ask about more than one topic or concept.",
+        "filtered_questions": {
+          "main_paper_depth": [
+            "Does the 'Paper Content Summary' include specific technical terminologies (e.g., specific model architectures, loss functions, mathematical formulations) rather than just high-level functional descriptions?",
+            "Are specific quantitative metrics or experimental results from the main paper explicitly cited to substantiate the claims in the 'Claimed Novelty' or 'Details of Unique Differences' sections?",
+            "Does the report explicitly define the specific input data types, datasets, or benchmark environments used in the main paper?",
+            "Does the report accurately classify the innovation type (e.g., Methodological, Theoretical) and provide a technical explanation that aligns strictly with that classification?"
+          ],
+          "retrieval_analysis_depth": [
+            "In the 'Similarities' section, does the report describe specific shared mechanisms, equations, or structural elements between the main paper and the retrieved works, rather than just generic thematic overlaps?",
+            "Does the 'Unique Differences' section explicitly contrast specific features (e.g., 'static vector' vs. 'graph-informed ODE') derived directly from the retrieved comparison text?",
+            "Does the comparative analysis avoid vague phrases like 'better performance' and instead specify *why* or *how* the method differs structurally based on the retrieved text?",
+            "If the retrieved text contains specific baselines or prior models, are they explicitly named and compared against in the analysis?"
+          ],
+          "independent_thinking": [
+            "When the provided text highlights similarities between the main paper and prior work, does the report's final innovation assessment reflect these similarities, rather than simply repeating the author's claims of novelty?",
+            "Does the report evaluate innovation along multiple dimensions—such as implementation, similarity to prior work, and technical contribution—based on the evidence in the provided texts?",
+            "Does the report appear to autonomously assess the author's claims on the basis of evidence from the provided texts, rather than just repeating the author's words?",
+            "When evidence in the provided texts is ambiguous or insufficient to support the author's Claimed noveltys, does the report acknowledge this uncertainty?",
+            "Does the novelty summary acknowledge at least one limitation, boundary condition, or negative aspect of the Claimed noveltys, if such information is inferable from the provided texts?"
+          ]
+        }
+      }
+    }
+  }
+}
