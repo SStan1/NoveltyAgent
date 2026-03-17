@@ -1,8 +1,6 @@
 
 ## Demo
 
-## Demo
-
 We provide a short demo video (approximately 1.5 minutes) showcasing the usage of NoveltyAgent. Watching this video is the most intuitive and fastest way to understand how our framework operates.
 
 > **Note:** Due to the restrictions of the anonymous repository, the `.mp4` video file cannot be displayed or streamed directly. Please download and extract the provided `.zip` file to watch the demo locally. We apologize for any inconvenience this may cause.
