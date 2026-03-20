@@ -1,10 +1,4 @@
 
-## Demo
-
-We provide a short demo video (approximately 1.5 minutes) showcasing the usage of NoveltyAgent. Watching this video is the most intuitive and fastest way to understand how our framework operates.
-
-> **Note:** Due to the restrictions of the anonymous repository, the `.mp4` video file cannot be displayed or streamed directly. Please download and extract the provided `.zip` file to watch the demo locally. We apologize for any inconvenience this may cause.
-
 # NoveltyAgent
 
 NoveltyAgent is the official codebase for our paper:
@@ -31,7 +25,13 @@ Compared with general-purpose review or deep research systems, NoveltyAgent is d
 
 - **Better faithfulness** — It includes a self-validation step to reduce unsupported claims and improve the reliability of the generated report.
 
+## Demo
 
+We provide a short demo video to illustrate the usage of NoveltyAgent:
+
+https://github.com/user-attachments/assets/89c18aa2-4809-4256-8336-4d0ed74844e1
+
+> **Note:** This demo is for demonstration purposes only. In real-world usage, the analysis process takes significantly longer than shown in the video, as it involves extensive literature retrieval, comparison, and validation steps.
 
 ## Installation & Setup
 
