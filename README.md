@@ -1,4 +1,3 @@
-
 # NoveltyAgent
 
 NoveltyAgent is the official codebase for our paper:
@@ -6,6 +5,8 @@ NoveltyAgent is the official codebase for our paper:
 > **NoveltyAgent: Autonomous Novelty Reporting Agent with Point-wise Novelty Analysis and Self-Validation**
 
 It is designed to help users quickly understand **how novel a research paper is** by retrieving related literature, comparing the paper's main contributions with prior work, and automatically generating a structured novelty analysis report.
+
+⭐ If you find this project useful, please consider giving us a **star** — it helps others discover the project and motivates continued development!
 
 ## Overview
 
@@ -68,7 +69,6 @@ snapshot_download(
 )
 "
 ```
-
 
 ### Step 4: Deploy RAGFlow
 
@@ -161,3 +161,18 @@ The application will be available by default at:
 http://localhost:8501
 ```
 
+## Citation
+
+If you find our work helpful, please consider citing our paper:
+
+```bibtex
+@misc{hou2026noveltyagentautonomousnoveltyreporting,
+      title={NoveltyAgent: Autonomous Novelty Reporting Agent with Point-wise Novelty Analysis and Self-Validation}, 
+      author={Jiajun Hou and Hexuan Deng and Wenxiang Jiao and Xuebo Liu and Xiaopeng Ke and Min Zhang},
+      year={2026},
+      eprint={2603.20884},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.20884}, 
+}
+```
